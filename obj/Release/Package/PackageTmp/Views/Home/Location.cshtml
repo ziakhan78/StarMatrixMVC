@@ -1,0 +1,135 @@
+﻿@model IEnumerable<StarMatrix.Models.ShipLocation>
+@{
+    ViewData["Title"] = "Towage";
+}
+
+
+<section class="inner_banner" style="position: relative;">
+
+    <div class="overlay_inn">
+        <div class="container"><h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h3></div>
+    </div>
+    <img src="~/images/Slider-01.jpg" alt="Slider" class="img-fluid" />
+
+</section>
+
+<div class="bg-dark ">
+    <div class="container">
+        <div class="row">
+
+            <nav class=" ">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li class="breadcrumb-item active">Location</li>
+                </ol>
+            </nav>
+
+
+
+        </div>
+    </div>
+</div>
+
+<div class="clearfix"></div>
+
+
+
+<section class="container mt-3">
+    <div class="row">
+
+        <div class="col-md-9">
+            <h2> Location </h2>
+
+        
+
+
+            <table class="table table-bordered table-hover small">
+
+
+                <thead class="bg-light">
+                    <tr>
+                        <th>Sr.</th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Tugs.TugName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Tugs.BollardPullName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Tugs.EngineHPName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Tugs.ClassTypeName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PresentLocation)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Availability)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.AvailableLocation)
+                        </th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @{ int rowno = 0;}
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td>
+                            @(rowno += 1)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Tugs.TugName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Tugs.BollardPullName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Tugs.EngineHPName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Tugs.ClassTypeName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PresentLocation)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Availability)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AvailableLocation)
+                        </td>
+
+
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-md-3 wow fadeInUp" data-wow-delay="0.3s">
+
+            <div class="list-group margin_top ">
+                <a asp-controller="Home" asp-action="Location" class="list-group-item bg-light right_paneldhy mb-2"> Location</a>
+                <a asp-controller="Home" asp-action="LocationMap" class="list-group-item bg-light right_paneldhy mb-2"> Location Map</a>
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+</section>
+
+
+
+

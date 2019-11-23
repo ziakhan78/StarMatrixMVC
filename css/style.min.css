@@ -1,0 +1,314 @@
+
+body::-webkit-scrollbar {
+    width: 6px;
+}
+ 
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+
+
+
+
+
+
+.carousel,
+.carousel .carousel-inner,
+.carousel .carousel-inner .active,
+.carousel .carousel-inner .carousel-item,
+.view,
+body,
+html {
+    height: 100%
+}
+
+.navbar {
+    background-color: #fff;
+}
+
+
+
+.navbar-toggler .line{
+width: 100%;
+float: left;
+height: 2px;
+background-color: #333;
+margin-bottom: 5px;
+
+}
+
+
+
+.overlay_main {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url(../images/slider_main_strip.png) repeat-x;
+  overflow: hidden;
+  width: 100%;
+  height: 90px;
+  transition: .5s ease; z-index:100000; padding:0px 0;
+}
+
+
+.myborderright {border-right: 1px solid #666!important; height:80%; padding-top:0px;}
+
+
+.navbar {    padding: .2rem .5rem;}
+.heading_ltext{ font-size:24px; color:#fff; font-weight:700; padding-left:20px;}
+
+.copyright p{ font-size:13px; margin:0px; padding:0px;}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+
+.location_text{ position: absolute; z-index:10000;}
+.location_text h2{ color:#fff; right:0px; margin-left:75%; font-size:21px; margin-top:18px; }
+
+
+.overlay_inn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+background-color: rgba(0, 0, 0, 0.6)   ;
+  overflow: hidden;
+  width: 100%;
+  height: 50px;
+  transition: .5s ease; z-index:1000;
+}
+
+.overlay_inn h3 { color:#fff; font-style:italic; font-size:20px; padding:10px 0 0 0;
+
+}
+
+
+.breadcrumb-item a{ color:#fff;}
+.left_consection{ background-color:#f9f9f9;}
+
+.p-100 { padding:30px 100px 0 100px;}
+
+
+
+
+
+.contact_add{ width:100%;}
+.contact_add ul { padding-left:20px; list-style:none;}
+.contact_add li: { margin-bottom:20px; background-image:url(../images/Bone-Grafting.jpg); background-repeat:no-repeat; padding-left:60px; padding-bottom:20px;}
+.contact_add li:nth-child(1) { background-image:url(../images/con-map-icon.jpg); background-repeat:no-repeat; padding-left:60px; padding-bottom:20px;}
+.contact_add li:nth-child(2) { background-image:url(../images/ph-con-icon.jpg); background-repeat:no-repeat; padding-left:60px; padding-bottom:20px;}
+.contact_add li:nth-child(3) { background-image:url(../images/fax_icon.jpg); background-repeat:no-repeat; padding-left:60px; padding-bottom:20px;}
+.contact_add li:nth-child(4) { background-image:url(../images/envelop-con-icon.jpg); background-repeat:no-repeat; padding-left:60px; padding-bottom:20px;}
+
+
+
+nav a {
+    color: #000;
+    margin: 0 10px;
+    display: inline-block
+}
+
+
+
+
+/* change the background color */
+.navbar-custom {
+}
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    padding: 0.8rem 10px;
+}
+/* change the link color and add padding for height */
+.navbar-custom .navbar-nav .nav-link {
+    padding: 4px 8px;
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #fff;
+    background-color: #161513; /* add background-color to active links */
+}
+.navbar-custom {
+    background-color: none;
+}
+
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+}
+
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+  
+}
+
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #fff;
+}
+
+/* for dropdown only - change the color of droodown */
+.navbar-custom .dropdown-menu {
+    background-color: #ff5500;
+}
+.navbar-custom .dropdown-item {
+    color: #ffffff;
+}
+.navbar-custom .dropdown-item:hover,
+.navbar-custom .dropdown-item:focus {
+    color: #333333;
+    background-color: rgba(255,255,255,.5);
+}
+
+
+
+.inner_banner{ width:100%; height:auto;}
+.inner_banner img{ width:100%; max-height:450px;}
+
+
+
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:20%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+.right_paneldhy { color:#333; font-size:17px; font-weight:700;}
+.right_paneldhy:hover { color:#fff; text-decoration:none;}
+
+
+
+
+.Why_Star_Matrix{ width:100%; height: auto; background:#9fb0c1 url(../images/why_starmatrix_bgimg.jpg) bottom right no-repeat; background-attachment:fixed; }
+
+	.mycarousel {
+  height: 450px !important;
+}
+
+
+
+
+/*sitemap */
+
+
+
+.sitemap{ width:100%; height:auto; padding-top:10px;}
+.sitemap h3{ font-size:18px; font-weight:bold; color:#444;}
+.sitemap h3 a{ font-size:18px; font-weight:bold; color:#444; text-decoration:none;}
+.sitemap h3 a:hover{ font-size:18px; font-weight:bold; color:#0CF; text-decoration:none;}
+
+ 
+ul.subsitemap{display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 0px; padding:0px; margin:0px; margin-bottom:20px; padding-left:20px;      }
+
+
+ul.subsitemap a{ font-size:16px; color:#444 
+      }
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width:768px) {
+    .navbar {
+        background-color: #fff
+    }
+	
+	
+	
+	.navbar-nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none; 
+	float:left; text-align:left;
+}
+
+	
+	
+	.location_text h2{ display:none; }
+	
+.myborderright { border-right: 0px solid #dee2e6!important}
+.overlay_main{ display:none;}
+.overlay_inn h3 {    font-size: 15px;}
+
+.p-100 { padding:30px;}
+
+
+.navbar-brand img{ width:200px; height:auto;}
+
+.inner_banner img{ width:100%; height:auto;}
+
+
+
+	
+}
+
+
+
+
+
+
+@media only screen and (max-width:960px) {
+  
+	
+	.location_text h2{ display:none; }
+	.myborderright {    border-right: 0px solid #dee2e6!important}
+	.flexslider .slides h4 { font-size:18px;}	
+	
+	
+	
+	
+}
+
+
+
+
+@media only screen and (max-width:1024px) {
+
+		.location_text h2{ display:none; }
+	
+	
+	
+	}
+
+
+
+@media only screen and (max-width:500px) {
+
+.navbar-brand img{ width:140px; height:auto;}
+
+}
+
+
+
+

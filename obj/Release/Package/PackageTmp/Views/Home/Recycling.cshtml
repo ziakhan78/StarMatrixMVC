@@ -1,0 +1,152 @@
+﻿@model StarMatrix.Models.Recycling
+@{
+    ViewData["Title"] = "Recycling";
+}
+<section class="inner_banner" style="position: relative;">
+
+    <div class="overlay_inn">
+        <div class="container"><h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h3></div>
+    </div>
+    <img src="~/images/Slider-01.jpg" alt="Slider" class="img-fluid" />
+
+</section>
+
+<div class="bg-dark ">
+    <div class="container">
+        <div class="row">
+
+            <nav class=" ">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Recycling</li>
+                </ol>
+            </nav>
+
+
+
+        </div>
+    </div>
+</div>
+
+<div class="clearfix"></div>
+
+
+
+<section class="container mt-3">
+    <div class="row">
+
+        <div class="col-md-9">
+            <h2> Demolition / Recycling </h2> 
+            <p class="text-justify">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy text of the dummy text of the printing and industry
+            </p>
+            <div >
+
+              
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="Typeofunit" class="control-label"></label>
+                            <input asp-for="Typeofunit" class="form-control" placeholder="(Rigs, Installations, Ship etc) please specify" />
+                            @Html.RadioButtonFor(model => model.Typeofunit, "Rigs", new { htmlAttributes = new { @class = "form-control" } })<span> Rigs</span>
+                            @Html.RadioButtonFor(model => model.Typeofunit, "Installations", new { htmlAttributes = new { @class = "form-control" } })<span> Installations</span>
+                            @Html.RadioButtonFor(model => model.Typeofunit, "Ship", new { htmlAttributes = new { @class = "form-control" } })<span> Ship</span>
+                            <span asp-validation-for="Typeofunit" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="EstimatedLigthship" class="control-label"></label>
+                            <input asp-for="EstimatedLigthship" class="form-control" />
+                            <span asp-validation-for="EstimatedLigthship" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Location" class="control-label"></label>
+                            <input asp-for="Location" class="form-control" />
+                            <span asp-validation-for="Location" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="LaidUp" class="control-label"></label>
+                            <input asp-for="LaidUp" class="form-control" />
+                            <span asp-validation-for="LaidUp" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Status" class="control-label"></label>
+                            <input asp-for="Status" class="form-control" placeholder="In case of tankers, gas free status of cargo and slop tanks for man entry and hot works" />
+                            <span asp-validation-for="Status" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="DeliveryLaycan" class="control-label"></label>
+                            <input asp-for="DeliveryLaycan" class="form-control" />
+                            <span asp-validation-for="DeliveryLaycan" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Dimensions" class="control-label"></label>
+                            <input asp-for="Dimensions" class="form-control" />
+                            <span asp-validation-for="Dimensions" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="HKC" class="control-label"></label>
+                            <input asp-for="HKC" class="form-control" />
+                            <span asp-validation-for="HKC" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-floppy-disk"></i> Submit</button>
+                        </div>
+                    </form>
+               
+            </div>
+        </div>
+
+        <div class="col-md-3 wow fadeInUp" data-wow-delay="0.3s">
+
+            <div class="list-group margin_top ">
+                <a asp-controller="Home" asp-action="About" class="list-group-item bg-light right_paneldhy mb-2"> Recycling</a>
+                <a asp-controller="Home" asp-action="Recycling" class="list-group-item bg-light right_paneldhy mb-2"> Complex Jobs Undertaken</a>
+                <a asp-controller="Home" asp-action="Towage" class="list-group-item bg-light right_paneldhy mb-2"> One Stop Shop</a>
+                <a asp-controller="Home" asp-action="Towage" class="list-group-item bg-light right_paneldhy mb-2"> Get a Quote</a>
+                <a asp-controller="Home" asp-action="Towage" class="list-group-item bg-light right_paneldhy mb-2"> Location's We Recycle</a>
+                <a asp-controller="Home" asp-action="Towage" class="list-group-item bg-light right_paneldhy mb-2"> Green Recycling</a>
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+</section>
+
+
+
+<section class="Why_Star_Matrix p-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9">
+                <h2>Why Star Matrix</h2>
+                <h4 class="">Lorem Ipsum is simply dummy </h4>
+
+                <p class="text-justify text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy text of the dummy text of the printing and industry is simply dummy text of the typesetting industry Lorem of the printing and industry is simply dummy text of the typesetting industry
+                <p class="text-justify text-white">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy text of the dummy text of the printing and industry is simply dummy text of the typesetting industry Lorem of the printing and industry is simply dummy text of the typesetting industry
+
+
+
+                </p>
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+</section>

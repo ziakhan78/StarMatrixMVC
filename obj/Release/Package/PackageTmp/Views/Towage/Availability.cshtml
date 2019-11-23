@@ -1,0 +1,139 @@
+﻿@model IEnumerable<StarMatrix.Models.ShipLocation>
+@{
+    ViewData["Title"] = "Availability";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="inner_banner" style="position: relative;">
+
+    <div class="overlay_inn">
+        <div class="container"><h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h3></div>
+    </div>
+    <img src="~/images/Slider-01.jpg" alt="Slider" class="img-fluid" />
+
+</section>
+
+<div class="bg-dark ">
+    <div class="container">
+        <div class="row">
+
+            <nav class=" ">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="~/Home">Home</a></li>
+                    <li class="breadcrumb-item"><a href="~/Towage/">Towage</a></li>                   
+                    <li class="breadcrumb-item active">Availability</li>
+                </ol>
+            </nav>
+
+
+
+        </div>
+    </div>
+</div>
+
+<div class="clearfix"></div>
+
+
+
+<section class="container mt-3">
+    <div class="row">
+
+        <div class="col-md-9">
+            <h2> Availability </h2>
+
+            <p class="text-justify">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy text of the dummy text of the printing and industry
+            </p>
+
+            <table class="table table-bordered table-hover small">
+
+
+                <thead class="bg-light">
+                    <tr>
+                        <th>Sr.</th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Tugs.TugName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Tugs.BollardPullName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Tugs.EngineHPName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Tugs.ClassTypeName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PresentLocation)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Availability)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.AvailableLocation)
+                        </th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @{ int rowno = 0;}
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @(rowno += 1)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Tugs.TugName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Tugs.BollardPullName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Tugs.EngineHPName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Tugs.ClassTypeName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PresentLocation)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Availability)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.AvailableLocation)
+                            </td>
+
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+
+
+        </div>
+
+        <div class="col-md-3 wow fadeInUp" data-wow-delay="0.3s">
+
+            <div class="list-group margin_top ">
+                <a href="~/Towage/" class="list-group-item bg-light right_paneldhy mb-2"> Present Fleet</a>
+                <a href="~/Towage/Live-Location" class="list-group-item bg-light right_paneldhy mb-2"> Live Location</a>
+                <a href="~/Towage/Availability" class="list-group-item bg-light right_paneldhy mb-2"> Availability</a>
+                <a href="~/Towage/Get-A-Quote"  class="list-group-item bg-light right_paneldhy mb-2"> Get a Quote</a>
+                <a href="~/Towage/Jobs-Undertaken" class="list-group-item bg-light right_paneldhy mb-2"> Jobs Undertaken</a>
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+</section>

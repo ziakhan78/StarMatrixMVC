@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewData["Title"] = "Live Location";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="inner_banner" style="position: relative;">
+
+    <div class="overlay_inn">
+        <div class="container"><h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h3></div>
+    </div>
+    <img src="~/images/Slider-01.jpg" alt="Slider" class="img-fluid" />
+
+</section>
+
+<div class="bg-dark ">
+    <div class="container">
+        <div class="row">
+
+            <nav class=" ">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="~/Home">Home</a></li>
+                    <li class="breadcrumb-item"><a href="~/Towage/">Towage</a></li>
+                    <li class="breadcrumb-item active">Live Location</li>
+                </ol>
+            </nav>
+
+
+
+        </div>
+    </div>
+</div>
+
+<div class="clearfix"></div>
+
+
+
+<section class="container mt-3">
+    <div class="row">
+
+        <div class="col-md-9">
+            <h2> Live Location </h2>
+
+            <p>A live map of your area for your web site</p>
+            <div>
+                <script type="text/javascript">
+                    width = '100%';
+                    height = '550';
+                    border = '0';
+                    shownames = 'false';
+                    latitude = '37.4460';
+                    longitude = '24.9467';
+                    zoom = '9';
+                    maptype = '1';
+                    trackvessel = '0';
+                    fleet = 'star matrix'; // the registered email address of a user-defined fleet (user's default fleet is used)
+                </script>
+                <script type="text/javascript" src="//www.marinetraffic.com/js/embed.js"></script>
+            </div>
+
+
+        </div>
+
+        <div class="col-md-3 wow fadeInUp" data-wow-delay="0.3s">
+
+            <div class="list-group margin_top ">
+                <a href="~/Towage/" class="list-group-item bg-light right_paneldhy mb-2"> Present Fleet</a>
+                <a href="~/Towage/Live-Location" class="list-group-item bg-light right_paneldhy mb-2"> Live Location</a>
+                <a href="~/Towage/Availability" class="list-group-item bg-light right_paneldhy mb-2"> Availability</a>
+                <a href="~/Towage/Get-A-Quote" class="list-group-item bg-light right_paneldhy mb-2"> Get a Quote</a>
+                <a href="~/Towage/Jobs-Undertaken" class="list-group-item bg-light right_paneldhy mb-2"> Jobs Undertaken</a>
+            </div>
+        </div>
+
+    </div>
+
+
+</section>
+

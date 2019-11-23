@@ -1,0 +1,52 @@
+﻿@model IEnumerable<StarMatrix.Models.Tug>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TugName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BollardPullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EngineHPName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClassTypeName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TugName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BollardPullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EngineHPName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClassTypeName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TugId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TugId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TugId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,129 @@
+﻿@model StarMatrix.Models.Recycling
+@{
+    ViewData["Title"] = "Get a Quote";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="inner_banner" style="position: relative;">
+    <div class="overlay_inn">
+        <div class="container"><h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h3></div>
+    </div>
+    <img src="~/images/Slider-01.jpg" alt="Slider" class="img-fluid" />
+</section>
+
+<div class="bg-dark ">
+    <div class="container">
+        <div class="row">
+
+            <nav class=" ">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="~/Home">Home</a></li>
+                    <li class="breadcrumb-item"><a href="~/Recycling/">Recycling</a></li>
+                    <li class="breadcrumb-item active">Get a Quote</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="clearfix"></div>
+
+<section class="container mt-3">
+    <div class="row">
+        <div class="col-md-9">
+            <h2> Get a Quote </h2>
+            <p class="text-justify">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy text of the dummy text of the printing and industry
+            </p>
+            <div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Typeofunit, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.Typeofunit, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Typeofunit, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EstimatedLigthship, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.EstimatedLigthship, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.EstimatedLigthship, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Location, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.Location, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Location, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.LaidUp, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.LaidUp, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.LaidUp, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Status, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.Status, new { htmlAttributes = new { @class = "form-control", @placeholder = "In case of tankers, gas free status of cargo and slop tanks for man entry and hot works" } })
+                        @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DeliveryLaycan, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.DeliveryLaycan, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.DeliveryLaycan, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Dimensions, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.Dimensions, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Dimensions, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.HKC, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.HKC, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.HKC, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                 
+                    <div class="col-md-9">
+                        <button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-floppy-disk"></i> Submit</button>
+                    </div>
+                </div>
+
+
+             
+            </div>
+        </div>
+        <div class="col-md-3 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="list-group margin_top ">
+                <a href="~/Recycling/Complex-Jobs-Undertaken/" class="list-group-item bg-light right_paneldhy mb-2"> Complex Jobs Undertaken</a>
+                <a href="~/Recycling/One-Stop-Shop/" class="list-group-item bg-light right_paneldhy mb-2"> One Stop Shop</a>
+                <a href="~/Recycling/Get-A-Quote/" class="list-group-item bg-light right_paneldhy mb-2"> Get a Quote</a>
+                <a href="~/Recycling/Location-We-Recycle/" class="list-group-item bg-light right_paneldhy mb-2"> Location's We Recycle</a>
+                <a href="~/Recycling/Green-Recycling/" class="list-group-item bg-light right_paneldhy mb-2"> Green Recycling</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+

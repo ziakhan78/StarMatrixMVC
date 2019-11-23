@@ -1,0 +1,151 @@
+﻿@model IEnumerable<StarMatrix.Models.ShipLocation>
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
+
+    <div class="carousel-inner" role="listbox">
+
+        <div class="carousel-item active">
+            <div class="view" style="background-image: url('images/Slider-01.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+                <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="view" style="background-image: url('images/Slider-02.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+
+
+            </div>
+        </div>
+
+
+
+        <div class="carousel-item">
+            <div class="view" style="background-image: url('images/Slider-03.jpg'); background-repeat: no-repeat; background-size: cover;">
+                <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div class="overlay_main">
+        <div class="row">
+            <div class="col-2 pt-3">
+                <div class="myborderright">
+                    <div class="location_text"><h2>Location</h2></div>
+
+
+
+                    <div class="">
+                        <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_7UVfnn.json" background="transparent" speed="1" style="width: 55px; height: 75px;" loop controls autoplay>
+                        </lottie-player>
+
+
+
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-10">
+                <div class="text_carousel">
+
+                    <div class="slider mt-2">
+
+                        <div class="flexslider">
+                            <ul class="slides">
+
+                                @foreach (var item in Model)
+                                {
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-2"> <img class="img-fluid" src="~/images/turo-boat.png"></div>
+
+
+
+                                            <div class="col-3 text-white">
+                                                <h4><strong>@Html.DisplayFor(modelItem => item.Tugs.TugName)</strong></h4>
+                                                <p>
+                                                    <b><span>Bollard Pull:</span></b> @Html.DisplayFor(modelItem => item.Tugs.BollardPullName)   <b><span>Engine HP:</span></b> @Html.DisplayFor(modelItem => item.Tugs.EngineHPName)<br />
+                                                    <b><span>Class:</span></b> @Html.DisplayFor(modelItem => item.Tugs.ClassTypeName)
+                                                </p>
+                                            </div>
+
+
+
+                                            <div class="col-3 text-white">
+                                                <p> <b> <span>Present Location:</span></b>  @Html.DisplayFor(modelItem => item.PresentLocation)</p>
+                                                <p> <b> <span>Availability:</span></b>  @Html.DisplayFor(modelItem => item.Availability)</p>
+
+                                            </div>
+
+
+
+                                            <div class="col-3 text-white">
+                                                <p> <b><span>Available Location:</span></b> @Html.DisplayFor(modelItem => item.AvailableLocation)</p>
+
+
+                                            </div>
+
+
+                                        </div>
+                                    </li>
+
+                                }
+
+
+
+                            </ul>
+                        </div>
+
+
+                        <div class="custom-navigation">
+                            <a href="#" class="flex-prev"><img src="~/images/left_arrow.jpg" alt="left_arrow" /></a>
+                            <a href="#" class="flex-next"><img src="~/images/right_arrow.jpg" alt="right_arrow" /></a>
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+    </div>
+</div>
+

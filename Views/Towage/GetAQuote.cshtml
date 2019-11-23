@@ -1,0 +1,144 @@
+﻿@model StarMatrix.Models.Towage
+@{
+    ViewData["Title"] = "Get a Quote";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="inner_banner" style="position: relative;">
+
+    <div class="overlay_inn">
+        <div class="container"><h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h3></div>
+    </div>
+    <img src="~/images/Slider-01.jpg" alt="Slider" class="img-fluid" />
+
+</section>
+
+<div class="bg-dark ">
+    <div class="container">
+        <div class="row">
+
+            <nav class=" ">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="~/Home">Home</a></li>
+                    <li class="breadcrumb-item"><a href="~/Towage/">Towage</a></li>
+                    <li class="breadcrumb-item active">Get a Quote</li>
+                </ol>
+            </nav>
+
+
+
+        </div>
+    </div>
+</div>
+
+<div class="clearfix"></div>
+
+
+
+<section class="container mt-3">
+    <div class="row">
+
+        <div class="col-md-9">
+            <h2> Get a Quote </h2>
+
+            <p class="text-justify">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy text of the dummy text of the printing and industry
+            </p>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.DeparturePort, htmlAttributes: new { @class = "control-label col-md-3" })
+                <div class="col-md-9">
+                    @Html.EditorFor(model => model.DeparturePort, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.DeparturePort, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.DestinationPort, htmlAttributes: new { @class = "control-label col-md-3" })
+                <div class="col-md-9">
+                    @Html.EditorFor(model => model.DestinationPort, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.DestinationPort, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.EstimatedDisplacement, htmlAttributes: new { @class = "control-label col-md-3" })
+                <div class="col-md-9">
+                    @Html.EditorFor(model => model.EstimatedDisplacement, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.EstimatedDisplacement, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.TowingDraft, htmlAttributes: new { @class = "control-label col-md-3" })
+                <div class="col-md-9">
+                    @Html.EditorFor(model => model.TowingDraft, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.TowingDraft, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Dimensions, htmlAttributes: new { @class = "control-label col-md-3" })
+                <div class="col-md-9">
+                    @Html.EditorFor(model => model.Dimensions, new { htmlAttributes = new { @class = "form-control", @placeholder = "Dimensions (L x B x W)" } })
+                    @Html.ValidationMessageFor(model => model.Dimensions, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.EstimatedLaycan, htmlAttributes: new { @class = "control-label col-md-3" })
+                <div class="col-md-9">
+                    @Html.EditorFor(model => model.EstimatedLaycan, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.EstimatedLaycan, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.TypeofTow, htmlAttributes: new { @class = "control-label col-md-3" })
+                <div class="col-md-9">
+                    @Html.EditorFor(model => model.TypeofTow, new { htmlAttributes = new { @class = "form-control", @placeholder = "(Jack up Rig, Semi Submersible, Ship etc) Please specify" } })
+                    @Html.ValidationMessageFor(model => model.TypeofTow, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.MinimumBPRequirements, htmlAttributes: new { @class = "control-label col-md-3" })
+                <div class="col-md-9">
+                    @Html.EditorFor(model => model.MinimumBPRequirements, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.MinimumBPRequirements, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+
+                <div class="col-md-9">
+                    <button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-floppy-disk"></i> Submit</button>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="col-md-3 wow fadeInUp" data-wow-delay="0.3s">
+
+            <div class="list-group margin_top ">
+                <a href="~/Towage/" class="list-group-item bg-light right_paneldhy mb-2"> Present Fleet</a>
+                <a href="~/Towage/Live-Location" class="list-group-item bg-light right_paneldhy mb-2"> Live Location</a>
+                <a href="~/Towage/Availability" class="list-group-item bg-light right_paneldhy mb-2"> Availability</a>
+                <a href="~/Towage/Get-A-Quote" class="list-group-item bg-light right_paneldhy mb-2"> Get a Quote</a>
+                <a href="~/Towage/Jobs-Undertaken" class="list-group-item bg-light right_paneldhy mb-2"> Jobs Undertaken</a>
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+</section>
+
+
