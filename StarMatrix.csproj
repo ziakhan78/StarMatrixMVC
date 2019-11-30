@@ -163,7 +163,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="mail\email_header.jpg" />
     <Content Include="mail\feedback.htm" />
-    <Content Include="mail\registration.htm" />
+    <Content Include="mail\Towage_GetAQuote.htm" />
+    <Content Include="mail\Recycling_GetAQuote.htm" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="fonts\fontawesome-webfont.eot" />

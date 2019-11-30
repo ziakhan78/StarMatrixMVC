@@ -37,43 +37,109 @@
 
 
 <section id="contact ">
-    <div class="row no-gutters ">
+    <div class="container">
+        <div class="row no-gutters ">
 
-        <div class="col-lg-6 left_consection">
+            <div class="col-lg-6 left_consection">
 
-            <div class="container">
-                <div class="p-100">
+                <div class="container">
+                    <div class="p-100">
 
-                    <div class="">
-                        <h3 class="widget-title mb-4">Get In Touch</h3>
-
-
-                        <div class="contact_add">
-                            <ul>
-                                <li class="mb-2">
-                                    <strong>Address</strong><br>702-B, Manmatndir Apartment, Indra Narayan Road,
-                                    <br>
-                                    Santacruz West, Mumbai –  400054, India.
-                                </li>
-
-                                <li class="mb-2"><strong>Contact</strong><br> +91 22 2648 2645 / 26 46 / 26 62</li>
-                                <li class="mb-2"><strong>Fax: </strong><br>  +91 22 2648 26 47 </li>
-                                <li class="mb-2"><strong>Email</strong> <br><a href="mailto:info@starmatrixltd.com">info@starmatrixltd.com</a> </li>
+                        <div class="">
+                            <h3 class="widget-title mb-4">Get In Touch</h3>
 
 
+                            <div class="contact_add">
+                                <ul>
+                                    <li class="mb-2">
+                                        <strong>Address</strong><br>702-B, Manmatndir Apartment, Indra Narayan Road,
+                                        <br>
+                                        Santacruz West, Mumbai –  400054, India.
+                                    </li>
+
+                                    <li class="mb-2"><strong>Contact</strong><br> +91 22 2648 2645 / 26 46 / 26 62</li>
+                                    <li class="mb-2"><strong>Fax: </strong><br>  +91 22 2648 26 47 </li>
+                                    <li class="mb-2"><strong>Email</strong> <br><a href="mailto:info@starmatrixltd.com">info@starmatrixltd.com</a> </li>
 
 
 
-                            </ul>
+
+
+                                </ul>
+
+                            </div>
+
+
+
+
+
+
 
                         </div>
 
 
 
+                    </div>
+
+
+
+                </div>
+
+            </div>
+            <div class="col-lg-6 ">
+
+                <div class="container">
+                    <div class="col-md-12 p-100">
+                        <h3 class="widget-title mb-4">Feedback Form</h3>
 
 
 
 
+                        @using (Html.BeginForm("Create", "Home", FormMethod.Post, new { enctype = "multipart/form-data", id = "Captcha" }))
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <div class="form-group">
+                                
+                                <input type="text" name="Name" class="form-control" id="Name" placeholder="Your Name" required data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            </div>
+
+
+
+                            <div class="form-group">
+                              
+                                <input type="email" class="form-control" name="Email" id="Email" placeholder="Your Email" required data-rule="email" data-msg="Please enter a valid email" />
+                            </div>
+
+
+
+                            <div class="form-group">
+                               
+                                <input type="number" class="form-control" name="Mobile" id="Mobile" placeholder="Mobile" required data-rule="minlen:10" data-msg="Please enter a valid mobile no." />
+                            </div>
+
+
+
+
+                            <div class="form-group">
+                               
+                                <textarea class="form-control" name="Message" rows="5" data-rule="required" required data-msg="Please write something for us" placeholder="Message"></textarea>
+                            </div>
+
+
+
+                            <button type="submit" class="btn  btn-dark">Submit</button> <button type="Reset" class="btn btn-dark">Reset</button>
+
+                            <div>
+                                <p>
+                                    <span style="color:green">@Html.Raw(ViewBag.Message)</span>
+                                    <span style="color:red">@Html.Raw(ViewBag.ErrMessage)</span>
+                                </p>
+                            </div>
+                        }
+
+                        <br>
+                      
                     </div>
 
 
@@ -84,84 +150,11 @@
 
             </div>
 
-        </div>
-        <div class="col-lg-6 ">
-
-            <div class="container">
-                <div class="col-md-12 p-100">
-                    <h3 class="widget-title mb-4">Feedback Form</h3>
-
-
-
-
-                    @using (Html.BeginForm("Create", "Home", FormMethod.Post, new { enctype = "multipart/form-data", id = "Captcha" }))
-                    {
-                        @Html.AntiForgeryToken()
-
-                        <div class="form-group">
-                            <label for="email">Your Name:</label>
-                            <input type="text" name="Name" class="form-control" id="Name" placeholder="Your Name" required data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                        </div>
-
-
-
-                        <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" class="form-control" name="Email" id="Email" placeholder="Your Email" required data-rule="email" data-msg="Please enter a valid email" />
-                        </div>
-
-
-
-                        <div class="form-group">
-                            <label for="email">Mobile:</label>
-                            <input type="number" class="form-control" name="Mobile" id="Mobile" placeholder="Mobile" required data-rule="minlen:10" data-msg="Please enter a valid mobile no." />
-                        </div>
-
-
-
-
-                        <div class="form-group">
-                            <label for="email">Your Message:</label>
-                            <textarea class="form-control" name="Message" rows="5" data-rule="required" required data-msg="Please write something for us" placeholder="Message"></textarea>
-                        </div>
-
-
-
-                        <button type="submit" class="btn  btn-dark">Submit</button> <button type="Reset" class="btn btn-dark">Reset</button>
-
-                        <div>
-                            <p>
-                                <span style="color:green">@Html.Raw(ViewBag.Message)</span>
-                                <span style="color:red">@Html.Raw(ViewBag.ErrMessage)</span>
-                            </p>
-                        </div>
-                    }
-
-                        <br>
-                        <br>
-
-
-
-
-
-
-
-
-                    </div>
-
-
-
-            </div>
-
 
 
         </div>
 
-
-
-    </div>
-
-
+</div>
 </section>
 
 <div class="clearfix"></div>

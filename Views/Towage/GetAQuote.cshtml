@@ -45,79 +45,90 @@
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy text of the dummy text of the printing and industry
             </p>
 
-            <div class="form-group">
-                @Html.LabelFor(model => model.DeparturePort, htmlAttributes: new { @class = "control-label col-md-3" })
-                <div class="col-md-9">
-                    @Html.EditorFor(model => model.DeparturePort, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.DeparturePort, "", new { @class = "text-danger" })
+
+            @using (Html.BeginForm("Create", "Towage", FormMethod.Post, new { enctype = "multipart/form-data", id = "Captcha" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DeparturePort, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.DeparturePort, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.DeparturePort, "", new { @class = "text-danger" })
+                    </div>
                 </div>
-            </div>
 
-            <div class="form-group">
-                @Html.LabelFor(model => model.DestinationPort, htmlAttributes: new { @class = "control-label col-md-3" })
-                <div class="col-md-9">
-                    @Html.EditorFor(model => model.DestinationPort, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.DestinationPort, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DestinationPort, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.DestinationPort, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.DestinationPort, "", new { @class = "text-danger" })
+                    </div>
                 </div>
-            </div>
 
-            <div class="form-group">
-                @Html.LabelFor(model => model.EstimatedDisplacement, htmlAttributes: new { @class = "control-label col-md-3" })
-                <div class="col-md-9">
-                    @Html.EditorFor(model => model.EstimatedDisplacement, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.EstimatedDisplacement, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EstimatedDisplacement, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.EstimatedDisplacement, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.EstimatedDisplacement, "", new { @class = "text-danger" })
+                    </div>
                 </div>
-            </div>
 
-            <div class="form-group">
-                @Html.LabelFor(model => model.TowingDraft, htmlAttributes: new { @class = "control-label col-md-3" })
-                <div class="col-md-9">
-                    @Html.EditorFor(model => model.TowingDraft, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.TowingDraft, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.TowingDraft, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.TowingDraft, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.TowingDraft, "", new { @class = "text-danger" })
+                    </div>
                 </div>
-            </div>
 
-            <div class="form-group">
-                @Html.LabelFor(model => model.Dimensions, htmlAttributes: new { @class = "control-label col-md-3" })
-                <div class="col-md-9">
-                    @Html.EditorFor(model => model.Dimensions, new { htmlAttributes = new { @class = "form-control", @placeholder = "Dimensions (L x B x W)" } })
-                    @Html.ValidationMessageFor(model => model.Dimensions, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Dimensions, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.Dimensions, new { htmlAttributes = new { @class = "form-control", @placeholder = "Dimensions (L x B x W)" } })
+                        @Html.ValidationMessageFor(model => model.Dimensions, "", new { @class = "text-danger" })
+                    </div>
                 </div>
-            </div>
 
-            <div class="form-group">
-                @Html.LabelFor(model => model.EstimatedLaycan, htmlAttributes: new { @class = "control-label col-md-3" })
-                <div class="col-md-9">
-                    @Html.EditorFor(model => model.EstimatedLaycan, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.EstimatedLaycan, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EstimatedLaycan, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.EstimatedLaycan, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.EstimatedLaycan, "", new { @class = "text-danger" })
+                    </div>
                 </div>
-            </div>
 
-            <div class="form-group">
-                @Html.LabelFor(model => model.TypeofTow, htmlAttributes: new { @class = "control-label col-md-3" })
-                <div class="col-md-9">
-                    @Html.EditorFor(model => model.TypeofTow, new { htmlAttributes = new { @class = "form-control", @placeholder = "(Jack up Rig, Semi Submersible, Ship etc) Please specify" } })
-                    @Html.ValidationMessageFor(model => model.TypeofTow, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.TypeofTow, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.TypeofTow, new { htmlAttributes = new { @class = "form-control", @placeholder = "(Jack up Rig, Semi Submersible, Ship etc) Please specify" } })
+                        @Html.ValidationMessageFor(model => model.TypeofTow, "", new { @class = "text-danger" })
+                    </div>
                 </div>
-            </div>
 
-            <div class="form-group">
-                @Html.LabelFor(model => model.MinimumBPRequirements, htmlAttributes: new { @class = "control-label col-md-3" })
-                <div class="col-md-9">
-                    @Html.EditorFor(model => model.MinimumBPRequirements, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.MinimumBPRequirements, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.MinimumBPRequirements, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.MinimumBPRequirements, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.MinimumBPRequirements, "", new { @class = "text-danger" })
+                    </div>
                 </div>
-            </div>
 
-            <div class="form-group">
+                <div class="form-group">
 
-                <div class="col-md-9">
-                    <button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-floppy-disk"></i> Submit</button>
+                    <div class="col-md-9">
+                        <button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-floppy-disk"></i> Submit</button>
+                    </div>
+
+                    <div>
+                        <p>
+                            <span style="color:green">@Html.Raw(ViewBag.Message)</span>
+                            <span style="color:red">@Html.Raw(ViewBag.ErrMessage)</span>
+                        </p>
+                    </div>
                 </div>
+            }
+
             </div>
-
-
-        </div>
 
         <div class="col-md-3 wow fadeInUp" data-wow-delay="0.3s">
 
